@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useQuery } from 'react-query'
+import { motion } from 'framer-motion'
 import Flex from '@/components/shared/Flex'
 import Text from '@/components/shared/Text'
 import Top from '@/components/shared/Top'
@@ -32,13 +33,24 @@ function CardPage() {
       <ul>
         {benefit.map((text, idx) => {
           return (
-            <ListRow
-              key={idx}
-              left={<IconCheck />}
-              contents={
-                <ListRow.Texts title={`혜택 ${idx + 1}`} subTitle={text} />
-              }
-            />
+            <motion.li
+              initial={{ opacity: 0, translateX: -90 }}
+              transition={{
+                duration: 0.5,
+                ease: [0.25, 0.1, 0.25, 0.1],
+                delay: idx * 0.1,
+              }}
+              animate={{ opacity: 1, translateX: 0 }}
+            >
+              <ListRow
+                key={idx}
+                as="div"
+                left={<IconCheck />}
+                contents={
+                  <ListRow.Texts title={`혜택 ${idx + 1}`} subTitle={text} />
+                }
+              />
+            </motion.li>
           )
         })}
       </ul>
