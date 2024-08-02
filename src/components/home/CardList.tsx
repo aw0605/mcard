@@ -5,6 +5,7 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 
 import { getCards } from '@/remote/card'
 import ListRow from '@shared/ListRow'
+import Badge from '@shared/Badge'
 
 function CardList() {
   const {
@@ -51,7 +52,9 @@ function CardList() {
                 contents={
                   <ListRow.Texts title={`${idx + 1}위`} subTitle={card.name} />
                 }
-                right={card.payback != null ? <div>{card.payback}</div> : null}
+                right={
+                  card.payback != null ? <Badge label={card.payback} /> : null
+                }
                 withArrow={true}
                 onClick={() => {
                   console.log('클릭')
