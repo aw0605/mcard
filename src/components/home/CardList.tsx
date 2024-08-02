@@ -1,5 +1,6 @@
 import { useCallback } from 'react'
 import { useInfiniteQuery } from 'react-query'
+import { useNavigate } from 'react-router-dom'
 import { flatten } from 'lodash'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
@@ -24,6 +25,8 @@ function CardList() {
       },
     },
   )
+
+  const navigate = useNavigate()
 
   const loadMore = useCallback(() => {
     if (hasNextPage === false || isFetching) {
@@ -57,7 +60,7 @@ function CardList() {
                 }
                 withArrow={true}
                 onClick={() => {
-                  console.log('클릭')
+                  navigate(`/card/${card.id}`)
                 }}
               />
             )
