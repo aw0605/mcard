@@ -8,9 +8,10 @@ import { colors } from '@/styles/colorPalette'
 interface FixedBottomBtnProps {
   label: string
   onClick: () => void
+  disabled?: boolean
 }
 
-function FixedBottomBtn({ label, onClick }: FixedBottomBtnProps) {
+function FixedBottomBtn({ label, onClick, disabled }: FixedBottomBtnProps) {
   const $portalRoot = document.getElementById('root-portal')
 
   if ($portalRoot == null) {
@@ -19,7 +20,13 @@ function FixedBottomBtn({ label, onClick }: FixedBottomBtnProps) {
 
   return createPortal(
     <Container>
-      <Button onClick={onClick} full={true} size="medium" css={BtnStyles}>
+      <Button
+        onClick={onClick}
+        full={true}
+        size="medium"
+        disabled={disabled}
+        css={BtnStyles}
+      >
         {label}
       </Button>
     </Container>,

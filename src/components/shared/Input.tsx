@@ -8,6 +8,7 @@ const Input = styled.input`
   height: 48px;
   font-weight: 500;
   border: 1px solid ${colors.grey};
+  border-radius: 8px;
   box-sizing: border-box;
 
   &:focus {
