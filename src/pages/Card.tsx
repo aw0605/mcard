@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import { motion } from 'framer-motion'
 import Flex from '@/components/shared/Flex'
@@ -9,9 +9,32 @@ import FixedBottomBtn from '@/components/shared/FixedBottomBtn'
 
 import { getCard } from '@/remote/card'
 import { css } from '@emotion/react'
+import { useCallback } from 'react'
+import useUser from '@/hooks/auth/useUser'
+import { useAlertContext } from '@/contexts/AlertContext'
 
 function CardPage() {
   const { id = '' } = useParams()
+
+  const user = useUser()
+  const { open } = useAlertContext()
+
+  const navigate = useNavigate()
+
+  const moveToApply = useCallback(() => {
+    if (user == null) {
+      open({
+        title: '로그인이 필요합니다.',
+        onBtnClick: () => {
+          navigate('/signin')
+        },
+      })
+
+      return
+    }
+
+    navigate(`/apply/${id}`)
+  }, [user, id, open, navigate])
 
   const { data } = useQuery(['card', id], () => getCard(id), {
     enabled: id !== '',
@@ -41,9 +64,9 @@ function CardPage() {
                 delay: idx * 0.1,
               }}
               animate={{ opacity: 1, translateX: 0 }}
+              key={idx}
             >
               <ListRow
-                key={idx}
                 as="div"
                 left={<IconCheck />}
                 contents={
@@ -62,7 +85,7 @@ function CardPage() {
         </Flex>
       ) : null}
 
-      <FixedBottomBtn label="신청하기" onClick={() => console.log('클릭')} />
+      <FixedBottomBtn label="신청하기" onClick={moveToApply} />
     </div>
   )
 }
