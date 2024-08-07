@@ -1,5 +1,12 @@
 import { User } from './user'
 
+export const APPLY_STATUS = {
+  REDAY: 'REDAY',
+  PROGRESS: 'PROGRESS',
+  COMPLETE: 'COMPLETE',
+  REJECT: 'REJECT',
+} as const
+
 export interface Term {
   id: string
   title: string
@@ -17,6 +24,7 @@ export interface ApplyValues {
   isMaster: boolean
   isRf: boolean
   isHipass: boolean
+  status: keyof typeof APPLY_STATUS
 }
 
 export interface Option {

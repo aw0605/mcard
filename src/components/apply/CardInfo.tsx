@@ -4,10 +4,14 @@ import FixedBottomBtn from '@shared/FixedBottomBtn'
 
 import { ApplyValues } from '@/models/apply'
 
-type InfoValues = Pick<ApplyValues, 'isMaster' | 'isRf' | 'isHipass'>
+type cardInfoValues = Pick<ApplyValues, 'isMaster' | 'isRf' | 'isHipass'>
 
-function CardInfo({ onNext }: { onNext: (infoValues: InfoValues) => void }) {
-  const [infoValues, setInfoValues] = useState<InfoValues>({
+function CardInfo({
+  onNext,
+}: {
+  onNext: (cardInfoValues: cardInfoValues) => void
+}) {
+  const [infoValues, setInfoValues] = useState<cardInfoValues>({
     isMaster: false,
     isRf: false,
     isHipass: false,

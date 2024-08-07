@@ -1,13 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import PrivateRoute from '@components/auth/PrivateRoute'
+import ScrollToTop from '@components/shared/ScrollToTop'
+import Navbar from '@components/shared/Navbar'
+
 import HomePage from '@pages/Home'
-import SingInPage from './pages/SignIn'
-import SingUpPage from './pages/SignUp'
-import CardPage from './pages/Card'
+import SingInPage from '@pages/SignIn'
+import SingUpPage from '@pages/SignUp'
+import CardPage from '@pages/Card'
 import TestPage from '@pages/Test'
-import ScrollToTop from './components/shared/ScrollToTop'
-import Navbar from './components/shared/Navbar'
-import PrivateRoute from './components/auth/PrivateRoute'
-import ApplyPage from './pages/Apply'
+import ApplyPage from '@pages/Apply'
+import ApplyDone from '@pages/ApplyDone'
 
 function App() {
   return (
@@ -24,6 +26,14 @@ function App() {
           element={
             <PrivateRoute>
               <ApplyPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/apply/done"
+          element={
+            <PrivateRoute>
+              <ApplyDone />
             </PrivateRoute>
           }
         />
