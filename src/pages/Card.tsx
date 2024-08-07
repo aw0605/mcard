@@ -1,17 +1,16 @@
+import { useCallback } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import { motion } from 'framer-motion'
-import Flex from '@/components/shared/Flex'
-import Text from '@/components/shared/Text'
-import Top from '@/components/shared/Top'
-import ListRow from '@/components/shared/ListRow'
-import FixedBottomBtn from '@/components/shared/FixedBottomBtn'
-
-import { getCard } from '@/remote/card'
 import { css } from '@emotion/react'
-import { useCallback } from 'react'
-import useUser from '@/hooks/auth/useUser'
-import { useAlertContext } from '@/contexts/AlertContext'
+import useUser from '@hooks/auth/useUser'
+import { getCard } from '@remote/card'
+import { useAlertContext } from '@contexts/AlertContext'
+import Flex from '@components/shared/Flex'
+import Text from '@components/shared/Text'
+import Top from '@components/shared/Top'
+import ListRow from '@components/shared/ListRow'
+import FixedBottomBtn from '@components/shared/FixedBottomBtn'
 
 function CardPage() {
   const { id = '' } = useParams()

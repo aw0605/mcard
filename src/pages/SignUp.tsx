@@ -1,11 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import { collection, doc, setDoc } from 'firebase/firestore'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
-import { useNavigate } from 'react-router-dom'
-import { auth, store } from '@/remote/firebase'
-import Form from '@/components/signup/Form'
+import { COLLECTIONS } from '@constants'
+import { auth, store } from '@remote/firebase'
+import Form from '@components/signup/Form'
 
-import { FormValues } from '@/models/signup'
-import { COLLECTIONS } from '@/constants'
+import { FormValues } from '@models/signup'
 
 function SingUpPage() {
   const navigate = useNavigate()

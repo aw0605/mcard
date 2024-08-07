@@ -1,6 +1,6 @@
 import { useMutation } from 'react-query'
 import { applyCard } from '@remote/apply'
-import { useAlertContext } from '@/contexts/AlertContext'
+import { useAlertContext } from '@contexts/AlertContext'
 
 import { ApplyValues } from '@models/apply'
 

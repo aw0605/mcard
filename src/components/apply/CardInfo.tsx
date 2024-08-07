@@ -2,7 +2,7 @@ import { useCallback, useState, MouseEvent } from 'react'
 import Button from '@shared/Button'
 import FixedBottomBtn from '@shared/FixedBottomBtn'
 
-import { ApplyValues } from '@/models/apply'
+import { ApplyValues } from '@models/apply'
 
 type cardInfoValues = Pick<ApplyValues, 'isMaster' | 'isRf' | 'isHipass'>
 

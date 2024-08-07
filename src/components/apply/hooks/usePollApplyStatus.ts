@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query'
-import { APPLY_STATUS } from '@/models/apply'
+import { APPLY_STATUS } from '@models/apply'
 
 interface usePollApplyStatusProps {
   onSuccess: () => void

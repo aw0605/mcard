@@ -1,13 +1,13 @@
 import { useCallback } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { signOut } from 'firebase/auth'
-import { auth } from '@/remote/firebase'
+import { auth } from '@remote/firebase'
 import { css } from '@emotion/react'
-import useUser from '@/hooks/auth/useUser'
+import useUser from '@hooks/auth/useUser'
 import Button from './Button'
 import Flex from './Flex'
 
-import { colors } from '@/styles/colorPalette'
+import { colors } from '@styles/colorPalette'
 
 function Navbar() {
   const location = useLocation()

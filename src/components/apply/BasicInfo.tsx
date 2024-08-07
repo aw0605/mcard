@@ -1,13 +1,13 @@
 import { ChangeEvent, useCallback, useState } from 'react'
 import Select from '@shared/Select'
+import FixedBottomBtn from '@shared/FixedBottomBtn'
 
 import {
   salaryOption,
   creditScoreOption,
   paymentDateOption,
-} from '@/constants/apply'
-import { ApplyValues } from '@/models/apply'
-import FixedBottomBtn from '../shared/FixedBottomBtn'
+} from '@constants/apply'
+import { ApplyValues } from '@models/apply'
 
 type InfoValues = Pick<ApplyValues, 'salary' | 'creditScore' | 'payDate'>
 

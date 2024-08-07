@@ -7,11 +7,11 @@ import styled from '@emotion/styled'
 import Flex from '@shared/Flex'
 import Text from '@shared/Text'
 
-import { getAddBanners } from '@/remote/adBanner'
+import { getAddBanners } from '@remote/adBanner'
 
 import 'swiper/css'
 
-import { colors } from '@/styles/colorPalette'
+import { colors } from '@styles/colorPalette'
 
 function AdBanners() {
   const { data } = useQuery(['adBanners'], () => getAddBanners())

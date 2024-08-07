@@ -1,4 +1,4 @@
-import { colors } from '@/styles/colorPalette'
+import { colors } from '@styles/colorPalette'
 import styled from '@emotion/styled'
 import Button from './Button'
 import Dimmed from './Dimmed'
@@ -28,7 +28,7 @@ function Alert({
     <Dimmed>
       <AlertContainer>
         <Text
-          typography="t4"
+          typography="t5"
           bold={true}
           display="block"
           style={{ marginBottom: 6 }}

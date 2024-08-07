@@ -1,11 +1,11 @@
 import { forwardRef, SelectHTMLAttributes } from 'react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import Flex from './Flex'
 import Text from './Text'
 
-import { Option } from '@/models/apply'
-import { colors } from '@/styles/colorPalette'
-import { css } from '@emotion/react'
+import { Option } from '@models/apply'
+import { colors } from '@styles/colorPalette'
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   label?: string

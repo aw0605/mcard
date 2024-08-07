@@ -8,9 +8,9 @@ import TextField from '@shared/TextField'
 import Spacing from '@shared/Spacing'
 import Button from '@shared/Button'
 
-import { colors } from '@/styles/colorPalette'
+import { colors } from '@styles/colorPalette'
 
-import { FormValues } from '@/models/signin'
+import { FormValues } from '@models/signin'
 
 function Form({ onSubmit }: { onSubmit: (formValues: FormValues) => void }) {
   const [formValues, setFormValues] = useState({

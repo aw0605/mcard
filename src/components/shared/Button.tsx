@@ -4,7 +4,7 @@ import {
   ButtonSize,
   buttonSizeMap,
   buttonWeakMap,
-} from '@/styles/button'
+} from '@styles/button'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import Flex from './Flex'

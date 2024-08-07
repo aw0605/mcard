@@ -3,7 +3,7 @@ import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import Button from './Button'
 
-import { colors } from '@/styles/colorPalette'
+import { colors } from '@styles/colorPalette'
 
 interface FixedBottomBtnProps {
   label: string

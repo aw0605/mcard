@@ -1,9 +1,9 @@
 import { useCallback, useState, MouseEvent } from 'react'
 import Agreement from '@shared/Agreement'
-import { agreeList } from '@/constants/apply'
-import FixedBottomBtn from '../shared/FixedBottomBtn'
+import { agreeList } from '@constants/apply'
+import FixedBottomBtn from '@shared/FixedBottomBtn'
 
-import { ApplyValues } from '@/models/apply'
+import { ApplyValues } from '@models/apply'
 
 function Terms({ onNext }: { onNext: (terms: ApplyValues['terms']) => void }) {
   const [termsAgree, setTermsAgree] = useState(() => {

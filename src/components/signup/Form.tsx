@@ -7,7 +7,7 @@ import FixedBottomBtn from '@shared/FixedBottomBtn'
 
 import { css } from '@emotion/react'
 
-import { FormValues } from '@/models/signup'
+import { FormValues } from '@models/signup'
 
 function Form({ onSubmit }: { onSubmit: (formValues: FormValues) => void }) {
   const [formValues, setFormValues] = useState<FormValues>({

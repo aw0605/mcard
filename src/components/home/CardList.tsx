@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { flatten } from 'lodash'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
-import { getCards } from '@/remote/card'
+import { getCards } from '@remote/card'
 import ListRow from '@shared/ListRow'
 import Badge from '@shared/Badge'
 

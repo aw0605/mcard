@@ -1,7 +1,6 @@
-import AdBanners from '@/components/home/AdBanners'
-import CardList from '@/components/home/CardList'
-import FixedBottomBtn from '@/components/shared/FixedBottomBtn'
-import Top from '@/components/shared/Top'
+import AdBanners from '@components/home/AdBanners'
+import CardList from '@components/home/CardList'
+import Top from '@components/shared/Top'
 
 function HomePage() {
   return (

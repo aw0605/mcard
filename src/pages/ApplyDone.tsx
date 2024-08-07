@@ -2,7 +2,6 @@ import { parse } from 'qs'
 import Flex from '@components/shared/Flex'
 import Text from '@components/shared/Text'
 import FixedBottomBtn from '@components/shared/FixedBottomBtn'
-import { colors } from '@/styles/colorPalette'
 import { css } from '@emotion/react'
 
 function ApplyDone() {

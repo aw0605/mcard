@@ -36,3 +36,27 @@ export async function updateApplyCard({
 
   updateDoc(applied.ref, applyValues)
 }
+
+export async function getAppliedCard({
+  userId,
+  cardId,
+}: {
+  cardId: string
+  userId: string
+}) {
+  const snapShot = await getDocs(
+    query(
+      collection(store, COLLECTIONS.CARD_APPLY),
+      where('cardId', '==', cardId),
+      where('userId', '==', userId),
+    ),
+  )
+
+  if (snapShot.docs.length === 0) {
+    return null
+  }
+
+  const [applied] = snapShot.docs
+
+  return applied.data() as ApplyValues
+}

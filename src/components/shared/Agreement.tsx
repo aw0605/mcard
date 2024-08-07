@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import Flex from './Flex'
 import Text from './Text'
 
-import { colors } from '@/styles/colorPalette'
+import { colors } from '@styles/colorPalette'
 
 function Agreement({ children }: { children: React.ReactNode }) {
   return (
