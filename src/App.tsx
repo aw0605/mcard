@@ -1,16 +1,17 @@
 import { Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PrivateRoute from '@components/auth/PrivateRoute'
-import ScrollToTop from '@components/shared/ScrollToTop'
-import Navbar from '@components/shared/Navbar'
+import ScrollToTop from '@shared/ScrollToTop'
+import Navbar from '@shared/Navbar'
 
 import HomePage from '@pages/Home'
 import SingInPage from '@pages/SignIn'
 import SingUpPage from '@pages/SignUp'
 import CardPage from '@pages/Card'
-import TestPage from '@pages/Test'
 import ApplyPage from '@pages/Apply'
 import ApplyDone from '@pages/ApplyDone'
+import MyPage from '@pages/My'
+import TestPage from '@pages/Test'
 
 function App() {
   return (
@@ -37,6 +38,14 @@ function App() {
           element={
             <PrivateRoute>
               <ApplyDone />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/my"
+          element={
+            <PrivateRoute>
+              <MyPage />
             </PrivateRoute>
           }
         />

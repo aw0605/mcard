@@ -6,11 +6,11 @@ import { css } from '@emotion/react'
 import useUser from '@hooks/auth/useUser'
 import { getCard } from '@remote/card'
 import { useAlertContext } from '@contexts/AlertContext'
-import Flex from '@components/shared/Flex'
-import Text from '@components/shared/Text'
-import Top from '@components/shared/Top'
-import ListRow from '@components/shared/ListRow'
-import FixedBottomBtn from '@components/shared/FixedBottomBtn'
+import Flex from '@shared/Flex'
+import Text from '@shared/Text'
+import Top from '@shared/Top'
+import ListRow from '@shared/ListRow'
+import FixedBottomBtn from '@shared/FixedBottomBtn'
 
 function CardPage() {
   const { id = '' } = useParams()

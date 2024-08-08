@@ -1,8 +1,8 @@
 import { parse } from 'qs'
-import Flex from '@components/shared/Flex'
-import Text from '@components/shared/Text'
-import FixedBottomBtn from '@components/shared/FixedBottomBtn'
 import { css } from '@emotion/react'
+import Flex from '@shared/Flex'
+import Text from '@shared/Text'
+import FixedBottomBtn from '@shared/FixedBottomBtn'
 
 function ApplyDone() {
   const { success } = parse(window.location.search, {

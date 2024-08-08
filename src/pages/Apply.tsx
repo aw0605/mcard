@@ -7,7 +7,7 @@ import usePollApplyStatus from '@components/apply/hooks/usePollApplyStatus'
 import useAppliedCard from '@components/apply/hooks/useAppliedCard'
 import { updateApplyCard } from '@remote/apply'
 import Apply from '@components/apply'
-import FullPageLoader from '@components/shared/FullPageLoader'
+import FullPageLoader from '@shared/FullPageLoader'
 
 import { APPLY_STATUS } from '@models/apply'
 
