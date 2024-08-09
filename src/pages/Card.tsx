@@ -10,6 +10,8 @@ import Flex from '@shared/Flex'
 import Text from '@shared/Text'
 import Top from '@shared/Top'
 import ListRow from '@shared/ListRow'
+import Spacing from '@shared/Spacing'
+import Review from '@/components/card/Review'
 import FixedBottomBtn from '@shared/FixedBottomBtn'
 
 function CardPage() {
@@ -83,6 +85,12 @@ function CardPage() {
           <Text typography="t7">{removeHtmlTags(promotion.terms)}</Text>
         </Flex>
       ) : null}
+
+      <Spacing size={100} />
+
+      <Review />
+
+      <Spacing size={100} />
 
       <FixedBottomBtn label="1분만에 신청하고 혜택받기" onClick={moveToApply} />
     </div>
