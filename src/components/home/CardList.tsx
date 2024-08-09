@@ -3,10 +3,9 @@ import { useInfiniteQuery } from 'react-query'
 import { useNavigate } from 'react-router-dom'
 import flatten from 'lodash.flatten'
 import InfiniteScroll from 'react-infinite-scroll-component'
-
-import { getCards } from '@remote/card'
 import ListRow from '@shared/ListRow'
 import Badge from '@shared/Badge'
+import { getCards } from '@remote/card'
 
 function CardList() {
   const {
@@ -23,6 +22,7 @@ function CardList() {
       getNextPageParam: (snapshot) => {
         return snapshot.lastVisible
       },
+      suspense: true,
     },
   )
 
@@ -43,7 +43,7 @@ function CardList() {
       <InfiniteScroll
         dataLength={cards.length}
         hasMore={hasNextPage}
-        loader={<></>}
+        loader={<ListRow.Skeleton />}
         next={loadMore}
         scrollThreshold="100px"
       >
