@@ -42,7 +42,7 @@ function SingInPage() {
         })
       }
     },
-    [open],
+    [open, navigate],
   )
 
   return (
