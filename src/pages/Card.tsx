@@ -84,7 +84,7 @@ function CardPage() {
         </Flex>
       ) : null}
 
-      <FixedBottomBtn label="신청하기" onClick={moveToApply} />
+      <FixedBottomBtn label="1분만에 신청하고 혜택받기" onClick={moveToApply} />
     </div>
   )
 }
